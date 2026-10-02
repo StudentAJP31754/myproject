@@ -1,0 +1,2 @@
+<h1>Witaj, {{ name }}!</h1>
+<p>To jest Twoja pierwsza strona w Django </p>
