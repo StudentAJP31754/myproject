@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskBoard</title>
+  <link rel="stylesheet" href="{% static 'taskboard/style.css' %}">
+</head>
+<body>
+  <header>
+    <h1>TaskBoard</h1>
+  </header>
+
+  <main>
+    <form id="task-form" novalidate>
+      <input type="text" id="task-title" placeholder="Nowe zadanie..." maxlength="200" autocomplete="off">
+      <button type="submit">Dodaj</button>
+    </form>
+
+    <div id="message" class="message" hidden></div>
+
+    <div class="toolbar">
+      <div class="filters">
+        <button type="button" class="filter active" data-filter="all">Wszystkie</button>
+        <button type="button" class="filter" data-filter="active">Aktywne</button>
+        <button type="button" class="filter" data-filter="completed">Ukończone</button>
+      </div>
+      <p class="summary">
+        Wszystkich: <strong id="count-all">0</strong> ·
+        Ukończonych: <strong id="count-completed">0</strong>
+      </p>
+    </div>
+
+    <ul id="task-list"></ul>
+    <p id="empty" class="empty" hidden>Brak zadań do wyświetlenia.</p>
+  </main>
+
+  <script src="{% static 'taskboard/app.js' %}"></script>
+</body>
+</html>

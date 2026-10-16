@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'witaj',
     'frontend_demo',
+    'taskboard',
 ]
 
 MIDDLEWARE = [

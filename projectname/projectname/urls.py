@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("witaj.urls")),
     path("", include("frontend_demo.urls")),
+    path("", include("taskboard.urls")),
 ]
